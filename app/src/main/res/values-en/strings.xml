@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ArtisanMusic</string>
+    <string name="app_name">LCK Gramophone</string>
 
     <string name="about_name">1900</string>
     <string name="about_github">https://github.com/1900Star</string>
@@ -61,7 +61,7 @@
     <string name="timing_close_play">Sleep Timer</string>
     <string name="edit_play_list">EditList</string>
     <string name="baidu_key">4502b57559</string>
-    <string name="app_info">ArtisanMusicPlayer A local music player modeled after the hammer music player. https://github.com/1900Star/SmartisanMusicPlayer </string>
+    <string name="app_info">LCK Gramophone A local music player modeled after the hammer music player. https://github.com/1900Star/SmartisanMusicPlayer </string>
     <string name="crash_log">CrashLog</string>
     <string name="take_photo">TakePicture</string>
     <string name="choice_photo">Gallery</string>
