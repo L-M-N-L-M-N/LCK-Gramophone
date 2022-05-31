@@ -30,6 +30,13 @@ android {
         }
     }
 
+    // 自定义打包名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "LCK-Gramophone.apk"
+        }
+    }
+
     dependencies {
         implementation 'androidx.legacy:legacy-support-v4:1.0.0'
         implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -72,3 +79,5 @@ android {
 dependencies {
     implementation 'androidx.test.ext:junit:1.1.3'
 }
+
+
