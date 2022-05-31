@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="textName">#939396</color>
+    <color name="noClickText">#bfbfbf</color>
+    <color name="tabbarTv">#939396</color>
+    <color name="tabbarDownTv">#E64040</color>
+    <color name="textDes">#4d4d4d</color>
+    <color name="listBg">#ededed</color>
+    <color name="progressBg">#F8F7F7</color>
+    <color name="slidBg">#e6e4e4</color>
+    <color name="colorGreen">#59e130</color>
+    <color name="deleteNorma">#f7817a</color>
+    <color name="deleteDown">#E65D54</color>
+    <color name="item">#e7e5e5</color>
+    //about
+    <color name="aboutTitle">#ff000000</color>
+    <color name="aboutSign">#5b5b5b</color>
+    <color name="lyricsNormal">#5b5b5b</color>
+    <color name="aboutContent">#ff414141</color>
+    <color name="about">#f7f1f1</color>
+
+
+    <!--BottomSheetDialogList-->
+    <!--SeekBar-->
+    <color name="seekBarP">#8e8e8f</color>
+    <color name="seekBarO">#c1c1c2</color>
+    <color name="seekBarX">#d0d0d2</color>
+    <color name="seekBarN">#ccdcdbdb</color>
+    <color name="bg_hint">#a1a1a1</color>
+    <!-- 透明 -->
+
+</resources>
