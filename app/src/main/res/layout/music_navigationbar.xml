@@ -9,33 +9,6 @@
     tools:ignore="UseCompoundDrawables">
 
     <LinearLayout
-        android:id="@+id/music_bar_playlist"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/music_bar_playlist_iv"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:background="@drawable/tabbar_playlist_down_selector"
-            android:contentDescription="@null"
-            android:scaleType="centerCrop" />
-
-        <TextView
-            android:id="@+id/music_bar_playlist_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/play_list"
-            android:textColor="@color/tabbarTv"
-            android:textSize="@dimen/music_tabbar"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/music_bar_artisanlist"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

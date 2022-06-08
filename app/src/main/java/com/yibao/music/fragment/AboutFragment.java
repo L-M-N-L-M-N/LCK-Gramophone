@@ -56,10 +56,6 @@ public class AboutFragment extends BaseLazyFragment {
     TextView mTvShare;
     @BindView(R.id.tv_scanner_media)
     TextView mtScannerMedia;
-    @BindView(R.id.tv_crash_log)
-    TextView mTvCrashLog;
-    @BindView(R.id.tv_delete_error_lyric)
-    TextView mTvDeleteErrorLyric;
     private long mCurrentPosition;
 
 
@@ -80,7 +76,7 @@ public class AboutFragment extends BaseLazyFragment {
     protected void initData() {
         File file = new File(Constants.MUSIC_LYRICS_ROOT);
         if (file.exists()) {
-            mTvDeleteErrorLyric.setVisibility(View.VISIBLE);
+//            mTvDeleteErrorLyric.setVisibility(View.VISIBLE);
         }
         File headerFile = FileUtil.getHeaderFile();
         if (FileUtil.getHeaderFile().exists()) {
@@ -104,12 +100,6 @@ public class AboutFragment extends BaseLazyFragment {
         mCompositeDisposable.add(RxView.clicks(mTvRecoverFavorite)
                 .throttleFirst(3, TimeUnit.SECONDS)
                 .subscribe(o -> recoverFavoriteList()));
-        mCompositeDisposable.add(RxView.clicks(mTvDeleteErrorLyric)
-                .throttleFirst(2, TimeUnit.SECONDS)
-                .subscribe(o -> clearErrorLyric()));
-        mCompositeDisposable.add(RxView.clicks(mTvCrashLog)
-                .throttleFirst(2, TimeUnit.SECONDS)
-                .subscribe(o -> CrashSheetDialog.newInstance().getBottomDialog(mActivity)));
         mAboutHeaderIv.setOnLongClickListener(view -> {
             RelaxDialogFragment.newInstance().show(mFragmentManager, "girlsDialog");
             return true;

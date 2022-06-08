@@ -19,9 +19,6 @@ import com.yibao.music.util.Constants;
  * 底部的导航Tab
  */
 public class MusicNavigationBar extends LinearLayout implements View.OnClickListener {
-    ImageView mMusicBarPlaylistIv;
-    TextView mMusicBarPlaylistTv;
-    LinearLayout mMusicBarPlaylist;
     ImageView mMusicBarArtisanlistIv;
     TextView mMusicBarArtisanlistTv;
     LinearLayout mMusicBarArtisanlist;
@@ -51,10 +48,6 @@ public class MusicNavigationBar extends LinearLayout implements View.OnClickList
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-
-            case R.id.music_bar_playlist:
-                switchMusicTabbar(Constants.NUMBER_ZERO);
-                break;
             case R.id.music_bar_artisanlist:
                 switchMusicTabbar(Constants.NUMBER_ONE);
                 break;
@@ -75,11 +68,6 @@ public class MusicNavigationBar extends LinearLayout implements View.OnClickList
     public void switchMusicTabbar(int flag) {
         setAllTabbarNotPressed(flag);
         switch (flag) {
-            case Constants.NUMBER_ZERO:
-                mMusicBarPlaylistIv.setBackgroundResource(R.drawable.tabbar_playlist_selector);
-                mMusicBarPlaylistTv.setTextColor(ColorUtil.musicbarTvDown);
-                mMusicBarPlaylist.setBackground(getResources().getDrawable(R.drawable.tabbar_bg_down));
-                break;
             case Constants.NUMBER_ONE:
                 mMusicBarArtisanlistIv.setBackgroundResource(R.drawable.tabbar_artisanlist_selector);
                 mMusicBarArtisanlistTv.setTextColor(ColorUtil.musicbarTvDown);
@@ -115,9 +103,6 @@ public class MusicNavigationBar extends LinearLayout implements View.OnClickList
         if (mBarSelecteListener != null) {
             mBarSelecteListener.currentFlag(flag);
         }
-        mMusicBarPlaylist.setBackgroundColor(ColorUtil.wihtle);
-        mMusicBarPlaylistIv.setBackgroundResource(R.drawable.tabbar_playlist_down_selector);
-        mMusicBarPlaylistTv.setTextColor(mNormalTabbarColor);
 
         mMusicBarArtisanlist.setBackgroundColor(ColorUtil.wihtle);
         mMusicBarArtisanlistIv.setBackgroundResource(R.drawable.tabbar_artisanlist_down_selector);
@@ -138,7 +123,6 @@ public class MusicNavigationBar extends LinearLayout implements View.OnClickList
 
     private void initListener() {
         mMusicBarAboutLl.setOnClickListener(this);
-        mMusicBarPlaylist.setOnClickListener(this);
         mMusicBarSonglist.setOnClickListener(this);
         mMusicBarAlbumlist.setOnClickListener(this);
         mMusicBarArtisanlist.setOnClickListener(this);
@@ -146,10 +130,6 @@ public class MusicNavigationBar extends LinearLayout implements View.OnClickList
 
     private void initView() {
         LayoutInflater.from(getContext()).inflate(R.layout.music_navigationbar, this, true);
-
-        mMusicBarPlaylistIv = findViewById(R.id.music_bar_playlist_iv);
-        mMusicBarPlaylistTv = findViewById(R.id.music_bar_playlist_tv);
-        mMusicBarPlaylist = findViewById(R.id.music_bar_playlist);
 
         mMusicBarArtisanlistIv = findViewById(R.id.music_bar_artisanlist_iv);
         mMusicBarArtisanlistTv = findViewById(R.id.music_bar_artisanlist_tv);
